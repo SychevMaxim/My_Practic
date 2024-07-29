@@ -13,11 +13,11 @@ print('\nЗадача task.2. .\n')
 
 salary = 0
 final_salary = 0
-mounth = 0
+mount = 0
 
 for average_salary in range(12):
 	salary = int(input("Введите свою зарплату: "))
-	mounth += 1
+	mount += 1
 	final_salary += salary
 
 print("Ваша среднегодовая зарплата равна: ", final_salary // 12)

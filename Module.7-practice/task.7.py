@@ -1,4 +1,4 @@
-print('\nЗадача task.7. .\n')
+print('Задача 7. Пропавшая карточка')
 
 # РЕШЕНИЕ
 # Для настольной игры используются карточки с номерами от 1 до N. Одна карточка потерялась. Напишите программу,
@@ -17,15 +17,37 @@ print('\nЗадача task.7. .\n')
 # region {===== Основной код =====}
 
 n = int(input("Введите количество карт: "))
-a = 0
-summ_cards = 0
-b = 0
 
-for cards in range(1, n):
-	remaining_card = int(input("Введите оставшуюся карту: "))
-	a += cards
-	b += remaining_card
+# сумма карт с учетом потерянной карты
+total_summ = 0
 
-print((a + cards + 1) - b, "карта пропущена")
+# сумма оставшихся карт
+remains_sum = 0
+
+b = 0 # сумма всех введенных карт без учета потерянной карты
+
+
+# region {===== первый способ =====}
+
+# for cards in range(1, n):
+# 	remaining_card = int(input("Введите оставшуюся карту: "))
+# 	a += cards
+# 	b += remaining_card
+#
+# print((a + card + 1) - b, "карта пропущена")
+
+# endregion {===== первый способ =====}
+
+
+# ищем сумму чисел всех карточек с учетом потерянно
+for card in range(1, n + 1):
+	total_summ += card
+
+# ищем сумму оставшихся карточек
+for remein in range(1, n):
+	curent_card = int(input("Введите оставшуюся карту: "))
+	remains_sum += curent_card
+
+print(f"\nНомер пропавшей карты: {total_summ - remains_sum}")
 
 # endregion {===== Основной код =====}
