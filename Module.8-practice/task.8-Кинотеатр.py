@@ -19,15 +19,15 @@ print('\nЗадача task.7-Кинотеатр. .\n')
 boy = int(input("Введите количество мальчиков: "))
 girl = int(input("Введите количество девочек: "))
 summ = 0
+
 for number in range(0, boy, 1):
-	if boy > (girl * 2):
+
+	if boy > (girl * 2) or girl > (boy * 2):
+
 		print("решения не найдено")
 		break
 
-	elif girl > (boy * 2):
-		break
-		print("решения не найдено")
-	elif	boy == girl:
+	elif boy == girl:
 
 		print("bg" * boy)
 		break
