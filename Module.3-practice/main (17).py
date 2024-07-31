@@ -1,5 +1,5 @@
-a = int(input("Enter the first number: "))
-b = int(input("Enter the second number: "))
+a = int(input("Enter the first letter: "))
+b = int(input("Enter the second letter: "))
 
 a = a + b
 b = a - b

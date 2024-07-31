@@ -32,35 +32,35 @@ else:
 #
 # while True:
 # 	# среднее число между верхней и нижней границой
-# 	number = (upper_bound + lower_bound) // 2
+# 	letter = (upper_bound + lower_bound) // 2
 #
-# 	print("твое число  больше,  меньше или равно числу", number, "?")
-# 	answer = int(input("1- больше, 2 - меньше, 3 = равно"))
+# 	print("твое число  больше,  меньше или равно числу", letter, "?")
+# 	input_key = int(input("1- больше, 2 - меньше, 3 = равно"))
 #
 # 	# если пользователь ввел 1
-# 	if answer == 1:
-# 		lower_bound = number + 1
+# 	if input_key == 1:
+# 		lower_bound = letter + 1
 #
 # 	# если пользователь ввел 3
 # 	# когда число подходт к этим границам + и - становятся меньше еденицы
-# 	elif number == 3:
-# 		number -= 1
+# 	elif letter == 3:
+# 		letter -= 1
 #
-# 	elif number == 2:
-# 		number -= 1
+# 	elif letter == 2:
+# 		letter -= 1
 #
-# 	elif number == 98:
-# 		number + 1
+# 	elif letter == 98:
+# 		letter + 1
 #
-# 	elif number == 99:
-# 		number + 1
+# 	elif letter == 99:
+# 		letter + 1
 #
 # 	# если пользователь ввел 2
-# 	elif answer == 2:
-# 		upper_bound = number - 1
+# 	elif input_key == 2:
+# 		upper_bound = letter - 1
 #
 # 	# если пользователь ввел 3
-# 	elif answer == 3:
+# 	elif input_key == 3:
 # 		print("Я угадал")
 # 		break
 

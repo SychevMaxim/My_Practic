@@ -1,4 +1,4 @@
-first_number = input("Enter first number: ")
+first_number = input("Enter first letter: ")
 full_number = first_number
 one_quarter_number = int(first_number) // 1000
 two_quarter_number = int(first_number) //100 % 10
