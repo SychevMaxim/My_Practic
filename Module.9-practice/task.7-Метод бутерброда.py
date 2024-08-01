@@ -1,36 +1,56 @@
+print('\nЗадача task.1-Метод бутерброда. .\n')
+
+# РЕШЕНИЕ
+# В секретном агентстве Super-Secret-no решили использовать «метод бутерброда» для шифрования переписки своих
+# сотрудников.
+# Сначала буквы слова нумеруются в таком порядке: первая буква получает номер 1, последняя буква — номер 2,
+# вторая — номер 3,
+# предпоследняя — номер 4,
+# потом третья… и так для всех букв (см. рисунок). Затем все буквы записываются в шифр в порядке своих номеров.
+# =============================
+
+
+
+
+
+# region {===== Основной код =====}
+
 word = input("Введите зашифрованное слово: ")
 numberLater = 0
 even = ''
 notEven = ''
 
 for text in word:
-  numberLater += 1
+    numberLater += 1
 
-  if numberLater % 2 == 0:
-    even += text
+    if numberLater % 2 == 0:
+        even += text
 
-  else:
-    notEven += text
+    else:
+        notEven += text
+
 print(notEven + even[::-1])
+
+# endregion {===== Основной код =====}
 
 # region {===== My_Code =====}
 
 # Получение данных
 
 # сохраняем введенное пользователем слово
-input_word = input('Введите строку: ')
-
-# перевернутое слово
-reverse_word = ''
-
-# переворачиваем введенное слово
-for char in input_word:
-    reverse_word = char + reverse_word
-
-# проверяем является ли слово палиндромом
-if input_word == reverse_word:
-    print('Да, это палиндром!')
-else:
-    print('Нет, это не палиндром!')
+# input_word = input('Введите строку: ')
+#
+# # перевернутое слово
+# reverse_word = ''
+#
+# # переворачиваем введенное слово
+# for char in input_word:
+#     reverse_word = char + reverse_word
+#
+# # проверяем является ли слово палиндромом
+# if input_word == reverse_word:
+#     print('Да, это палиндром!')
+# else:
+#     print('Нет, это не палиндром!')
 
 # endregion {===== My_Code =====}
