@@ -14,12 +14,26 @@ print('\nЗадача task.3-Рамка. .\n')
 height = int(input("Введите высоту"))
 width = int(input("Введите ширину"))
 
-for col in range(1, height + 1):
+for row in range(1, height + 1):
 
-	if col == 1 or col == height:
-		print("|" + "-" * width + "|")
+    for col in range(1, width + 1):
 
-	elif col != 1 and col != height:
-		print("|" + " " * width + "|")
+        # если это первая или последняя строка
+        # рисуем '|' + '-' + '|'
+        if (row == 1) or (row == height):
+            if (col == 1) or (col == width):
+                print('|', end = '')
+            else:
+                print('-', end = '')
+
+        # если 1 или последний столбец - рисуем '|'
+        elif (col == 1) or (col == width):
+            print('|', end = '')
+
+        # иначе пробел
+        else:
+            print(' ', end = '')
+
+    print()
 
 # endregion {===== Основной код =====}
