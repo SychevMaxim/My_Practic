@@ -16,18 +16,18 @@ films = ['Крепкий орешек', 'Назад в будущее', 'Так�
 favorit_films = []
 count_film = int(input("Введите количество фильмов желаемых добавить"))
 
-for number in range(1, count_film + 1):
+for _ in range(count_film):
+
 	name = input("Введите название фильма: ")
 
-	for num in range(1, len(films)):
+	for num in range(len(films)):
+
 		if films[num] == name:
 			favorit_films.append(name)
 			break
-
 	else:
-
 		print("Ошибка у нас нет такого фильма")
-		count = 0
+
 
 print("Ваши любимые фильмы:", favorit_films)
 

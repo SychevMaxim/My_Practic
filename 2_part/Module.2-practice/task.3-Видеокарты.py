@@ -1,4 +1,4 @@
-print('\nЗадача Видеокарты. .\n')
+print('\nЗадача 3. Видеокарты.\n')
 
 # РЕШЕНИЕ
 # В базе магазина электроники есть список видеокарт компании NVIDIA разных поколений. Вместо полных названий хранятся
@@ -6,30 +6,41 @@ print('\nЗадача Видеокарты. .\n')
 # Самые старшие поколения разобрали за пару дней.
 
 # Напишите программу, которая удаляет наибольшие элементы из списка видеокарт.
+
+# Количество видеокарт: 5
+# 1 Видеокарта: 3070
+# 2 Видеокарта: 2060
+# 3 Видеокарта: 3090
+# 4 Видеокарта: 3070
+# 5 Видеокарта: 3090
+#
+# Старый список видеокарт: [ 3070 2060 3090 3070 3090 ]
+# Новый список видеокарт: [ 3070 2060 3070 ]
+
 # =============================
-
-
-
 
 
 # region {===== Основной код =====}
 
-count_videoCards = int(input("Количество видеокарт: "))
-videoCards = []
-newvideoCards = []
+counter = int(input("Количество видеокарт: "))
+old_lst = []
+new_lst = []
+maximum = 0
 
-for num in range(1, count_videoCards + 1):
-	print("Видеокарта", str(num) + ":", end=" ")
-	number = int(input())
-	videoCards.append(number)
+# вводим номера карт и узнаем максимальную серию видеокарты
+for num in range(1, counter + 1):
+	number = int(input(f"Видеокарта {str(num)}: "))
+	old_lst.append(number)
+	if number > maximum:
+		maximum = number
 
-for series in videoCards:
+for series in old_lst:
 
-	if series < 3090:
-		newvideoCards.append(series)
+	if series < maximum:
+		new_lst.append(series)
 
-print("Старый список видеокарт", videoCards)
+print(f'Старый список видеокарт {old_lst}')
 
-print("Новый список видео карт", newvideoCards)
+print(f'Новый список видео карт {new_lst}')
 
 # endregion {===== Основной код =====}
